@@ -12,9 +12,7 @@ import org.springframework.http.ResponseEntity;
 public class ResponseData<T> {
 
     private T data;
-
     private String errorMessage;
-
     private long timestamp;
 
     public ResponseData(T data) {
@@ -22,7 +20,6 @@ public class ResponseData<T> {
         this.errorMessage = "";
         this.timestamp = System.currentTimeMillis();
     }
-
     public ResponseData(String errorMessage) {
         this.data = null;
         this.errorMessage = errorMessage;
