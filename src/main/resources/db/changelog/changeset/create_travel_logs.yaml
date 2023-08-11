@@ -1,0 +1,38 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-travel-logs
+      author: Farrukh
+      changes:
+        - createTable:
+            tableName: travel_logs
+            columns:
+              - column:
+                  name: id
+                  type: integer
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: entry_date
+                  type: date
+                  constraints:
+                    nullable: false
+              - column:
+                  name: vehicle_reg_number
+                  type: varchar
+              - column:
+                  name: vehicle_owner_name
+                  type: varchar
+              - column:
+                  name: odom_begin
+                  type: integer
+              - column:
+                  name: odom_end
+                  type: integer
+              - column:
+                  name: route
+                  type: varchar
+              - column:
+                  name: journey_description
+                  type: varchar
